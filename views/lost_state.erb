@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h1> Sorry, you have lost. The number was: <%= session[:secret_number] %> </h1>
+
+    <form action="/reset", method = "post">
+      <label for="reset">Please click here to play again.</label>
+      <input type="submit" id="reset" name="reset">
+    </form>
+  </body>
+</html>
