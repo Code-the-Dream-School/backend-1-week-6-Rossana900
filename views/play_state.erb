@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+  <body style="background-color:<%= session[:bgcolor] %>">
+    <h1>This is a guessing game, please enter a number between 1 and 100, you have 7 tries</h1>
+    <form action="/guess", method = "post">
+      <label for="input">Please guess a number (between 1 and 100):</label>
+      <input type="number" id="user_input" name="user_input" min="1" max="100">
+      <input type="submit">
+    </form>
+
+    <p> Your guesses so far: <%= session[:tries]  %></p>
+    <p> Your last guess was: <%= session[:mistake] %></p>
+  </body>
+</html>
