@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h1> Congratulations, you have won! You correctly guessed the number: <%= session[:secret_number] %> </h1>
+
+    <form action="/reset", method = "post">
+      <label for="reset">Please click here to play again.</label>
+      <input type="submit" id="reset" name="reset">
+    </form>
+  </body>
+</html>
